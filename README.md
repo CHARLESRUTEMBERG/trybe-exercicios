@@ -22,3 +22,6 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 [etc...]
 testando
+Para criar uma pasta versionada temos que criar uma pasta 
+depois utilizar o comando git init.
+
