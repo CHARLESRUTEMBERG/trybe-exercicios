@@ -52,6 +52,19 @@ console.log(info.personagem + ' e ' + info2.personagem);
 console.log(info.origem + ' e ' + info2.origem);
 console.log(info.nota + ' e ' + info2.nota);
 console.log('Ambos  ' + info2.recorrente);
+ 
+console.log('');
+for (let concat in info) {
+  if (
+    concat === 'recorrente' &&
+    info[concat] === 'Sim' &&
+    info2[concat] === 'Sim'
+  ) {
+    console.log('Ambos recorrentes');
+  } else {
+    console.log(info[concat] + ' e ' + info2[concat]);
+  }
+}
 
 
   //Margarida e Tio Patinhas
