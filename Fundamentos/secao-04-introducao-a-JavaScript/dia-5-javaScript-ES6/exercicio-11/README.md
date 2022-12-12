@@ -7,4 +7,4 @@ Exemplo:
 
 De olho na dica 👀: Nesse exercício, será necessário utilizar os conhecimentos sobre array, método split e loop for/of.
 
-Bônus (opcional): Tente fazer o mesmo exercício utilizando o método array.sort().
+Bônus (opcional): Tente fazer o mesmo exercício utilizando o método array.
