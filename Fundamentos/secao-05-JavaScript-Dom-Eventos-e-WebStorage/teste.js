@@ -1,10 +1,6 @@
-
-const paragraph = document.getElementById("paragraph");
-paragraph.style.color = "blue";
-const subtitle = document.getElementById('subtitle');subtitle.style.color = 'red';
-
-document.getElementById('teste')[1].innerText = 'Maria'
+document.getElementById('page-title').innerText = 'Matrix';
+document.querySelector('.vamos').innerText = 'Estou aprendendo a mecher com o DOM';
+document.querySelector('#subtitle').innerText = 'Também gostam do filme'
 
 
-document.querySelector('#page-title').style.color = 'red'
 
