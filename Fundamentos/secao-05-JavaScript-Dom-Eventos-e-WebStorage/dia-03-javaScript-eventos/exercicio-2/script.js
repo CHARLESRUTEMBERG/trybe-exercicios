@@ -56,6 +56,22 @@ const botonHoliday = (botonName) => {
 }
 botonHoliday('Feriados');
 
+const holiday = () => {
+  let holidayBoton = document.getElementById('btn-holiday');
+  let holidays = document.querySelectorAll('.holiday');
+  let backgroundColor = 'rgb(238,238,238)';
+  let setNewColor = 'white';
 
+  holidayBoton.addEventListener('click', () => {
+    for (index = 0; index < holidays.length; index += 1) {
+      if (holidays[index].style.backgroundColor === setNewColor) {
+        holidays[index].style.backgroundColor = backgroundColor;
+      } else {
+        holidays[index].style.backgroundColor = setNewColor;
+      }
+    }
+  });
+};
+holiday();
  
  
