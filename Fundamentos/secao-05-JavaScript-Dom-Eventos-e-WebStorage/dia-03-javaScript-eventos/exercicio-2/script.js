@@ -74,4 +74,69 @@ const holiday = () => {
 };
 holiday();
  
- 
+ const fridayBoton = (botonName) => {
+  let botonContainer = document.querySelector('.buttons-container');
+  let newBoton = document.createElement('button');
+  let newBotonId = 'btn-friday';
+
+  newBoton.innerHTML = botonName;
+  newBoton.id = newBotonId;
+  botonContainer.appendChild(newBoton);
+ }
+ fridayBoton('Sexta-feira');
+
+ const friday = () => {
+  let fridayBoton = document.getElementById('btn-friday');
+  let fridays = document.querySelectorAll('.friday');
+  let backgroundColor = 'rgb(238,238,238)';
+  let setNewColor = 'white';
+
+  fridayBoton.addEventListener('click', () => {
+    for (index = 0; index < fridays.length; index += 1) {
+      if (fridays[index].style.backgroundColor === setNewColor) {
+        fridays[index].style.backgroundColor = backgroundColor;
+      } else {
+        fridays[index].style.backgroundColor = setNewColor;
+      }
+    }
+  });
+};
+friday();
+
+const dayMouseOver = () => {
+  let days = document.getElementById('days');
+  days.addEventListener('mouseover', (event) => {
+    event.target.style.fontSize = '30px';
+    event.target.style.fontWeight = '600';
+
+  });
+}
+
+const dayMouseOut = () => {
+  let days = document.getElementById('days');
+  days.addEventListener('mouseout', (event) => {
+    event.target.style.fontSize = '20px';
+    event.target.style.fontWeight = '200';
+
+  });
+}
+dayMouseOver();
+dayMouseOut();
+
+const myTasks = (tasks) => {
+  let newMyTasks = document.querySelector('.my-tasks');
+  let newMyTasksElement = document.createElement('span');
+
+  newMyTasksElement.innerHTML =  tasks;
+  newMyTasks.appendChild(newMyTasksElement);
+}
+myTasks('projeto');
+
+const newColor = (color) => {
+  let myTasks = document.querySelector('.my-tasks');
+  let div = document.createElement('div');
+  div.className = 'task';
+  div.style.backgroundColor = color;
+  myTasks.appendChild(div);
+}
+newColor('green');
