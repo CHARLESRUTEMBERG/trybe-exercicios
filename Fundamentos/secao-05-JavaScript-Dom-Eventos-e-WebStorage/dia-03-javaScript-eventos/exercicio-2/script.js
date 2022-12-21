@@ -44,6 +44,18 @@ const createDaysOfTheMonth = () => {
   }
 }
 createDaysOfTheMonth();
- 
+
+const botonHoliday = (botonName) => {
+  let div = document.getElementsByClassName('buttons-container')[0];
+  let boton = document.createElement('button');
+  let botonId = 'btn-holiday';
+  boton.innerHTML = botonName;
+  boton.id = botonId;
+
+  div.appendChild(boton);
+}
+botonHoliday('Feriados');
+
+
  
  
