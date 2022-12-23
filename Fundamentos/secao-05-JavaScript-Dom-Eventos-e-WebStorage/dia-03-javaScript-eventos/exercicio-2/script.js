@@ -140,3 +140,65 @@ const newColor = (color) => {
   myTasks.appendChild(div);
 }
 newColor('green');
+
+const taskClass = () => {
+  let selectedTask = document.getElementsByClassName('task selected');
+  let mytasks = document.querySelector('.task');
+  
+  myTasks.addEventListener('click', (event) => {
+    if (selectedTask.length === 0) {
+      event.target.className = 'task selected';
+    }else {
+      event.target.className = 'task';
+    }
+  });
+}
+taskClass();
+
+const setDayColor = () => {
+  let selectedTask = document.getElementsByClassName('task selected');
+  let days = document.querySelector('#days');
+  let taskDiv = document.querySelector('.task');
+  let taskColor = taskDiv.style.backgroundColor;
+
+  days.addEventListener('click', (event) => {
+    let eventTargetColor = event.target.style.color;
+    if (selectedTask.length > 0 && eventTargetColor !== taskColor) {
+      let color = selectedTask[0].style.backgroundColor;
+      event.target.style.color = color
+    } else if (eventTargetColor === taskColor) {
+      event.target.style.color = 'rgb(119, 119, 119)';
+    }
+  });
+}
+setDayColor();
+
+const addNewTask = () => {
+  let getInputField = document.querySelector('#task-input');
+  let addInputButton = document.querySelector('#btn-add');
+  let getTaskList = document.querySelector('.task-list');
+
+  addInputButton.addEventListener('click', () => {
+    if (getInputField.value.length > 0) {
+      let newLi = document.createElement('li');
+      newLi.innerText = getInputField.value;
+
+      getTaskList.appendChild(newLi);
+      getInputField.value = '';
+    } else {
+      alert('Error: Digite ao menos 1 caractere.');
+    }
+  });
+
+  getInputField.addEventListener('keyup', (event) => {
+    if (event.key === 'Enter' && getInputField.value.length > 0) {
+      let newLi = document.createElement('li');
+      newLi.innerText = getInputField.value;
+
+      getTaskList.appendChild(newLi);
+      getInputField.value = '';
+    }
+  })
+}
+addNewTask();
+
