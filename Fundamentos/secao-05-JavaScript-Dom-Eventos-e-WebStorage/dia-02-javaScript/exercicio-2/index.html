@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main id="paiDoPai">
+        <section id="pai">
+          <section id="primeiroFilho"></section>
+          <section id="elementoOndeVoceEsta">
+            <section id="primeiroFilhoDoFilho"></section>
+            <section id="segundoEUltimoFilhoDoFilho"></section>
+          </section>
+          Atenção!
+          <section id="terceiroFilho"></section>
+          <section id="quartoEUltimoFilho"></section>
+        </section>
+      </main>
+      <script>
+        const pai = document.getElementById('pai');
+        const irmaoonde = document.createElement('section');
+        irmaoonde.id = 'irmaoElementoOndeVoceEsta';
+        pai.appendChild(irmaoonde);
+
+        const ElementoOnde = document.querySelector('#elementoOndeVoceEsta');
+        const filhoElementoOnde = document.createElement('section');
+        filhoElementoOnde.id = 'filhoElementoOndeVoceEsta';
+        ElementoOnde.appendChild(filhoElementoOnde);
+
+        const primeiroFilhoDoFilhoDoFilho = document.getElementById('primeiroFilhoDoFilho');
+        const primeiroFilhoDoFilhoDoFilhoCreat = document.createElement('section');
+        primeiroFilhoDoFilhoDoFilhoCreat.id = 'primeiroFilhoDoFilhoDoFilho';
+        primeiroFilhoDoFilhoDoFilho.appendChild(primeiroFilhoDoFilhoDoFilhoCreat)
+
+        const terceiro = primeiroFilhoDoFilhoDoFilho.parentElement.parentElement.lastElementChild.previousElementSibling.previousElementSibling;
+        
+        console.log(terceiro);
+        
+      </script>
+</body>
+</html>

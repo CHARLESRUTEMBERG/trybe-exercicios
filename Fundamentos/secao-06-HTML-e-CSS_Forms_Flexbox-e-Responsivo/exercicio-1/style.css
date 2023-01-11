@@ -1,0 +1,25 @@
+h1 {
+    font-style: normal;
+    color:blue ;
+}
+
+body {
+    text-align: center;
+    background-color:azure;
+}
+
+#senha {
+    color:blue
+}
+
+#email {
+    color: blue;
+}
+
+#senhaLabel {
+    color:cadetblue
+}
+
+#emailLabel {
+    color:cadetblue
+}
