@@ -95,7 +95,9 @@
     justify-content: center;
     margin: 10px;
     width: 605px;
-    height: 80vh;
+    height: 100vh;
+    margin-top: 100px;
+    
   }
   
   .aside-container h3, h4 {
