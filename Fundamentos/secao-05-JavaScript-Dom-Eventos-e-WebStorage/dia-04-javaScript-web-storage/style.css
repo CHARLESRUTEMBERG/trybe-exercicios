@@ -1,0 +1,50 @@
+.font-color {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center ;
+    flex-wrap: wrap;
+    border: 1px solid rgb(234, 57, 13);
+}
+body {
+    background-color: aquamarine;
+}
+
+.conteiner-matriz {
+    justify-content: space-around;
+    display: block;
+    width: 400px;
+    height: 370px;
+    margin-top: 100px;
+    border: 1px solid rgb(234, 57, 13);
+    
+
+}
+
+.matriz {
+    display: flex;
+    height: 355px;
+    width: 360px;
+    margin: 0 auto;
+    margin-top: 10px;
+    
+}
+.line {
+   
+    display: flex;
+    margin-top: 1px;
+    background-color: aliceblue;
+    height: 350px;
+    width: 200px;
+    flex-direction: column;
+   
+}
+.cell {
+    flex-direction: column;
+    display: flex;
+    border: 0.1px solid black;
+    height: 68px;
+    width: 70px;
+    margin: 0 auto;
+}
